@@ -1,0 +1,16 @@
+type group{
+    id : ID!
+    title : String!
+    member : [groupMember]! @goField(forceResolver: true)
+    admin : [groupMember]! @goField(forceResolver: true)
+    privacy : String!
+}
+
+extend type Query {
+    getAllGroup : [group]!
+    getGroupID(groupID : String!) : group!
+}
+
+extend type Mutation{
+    createGroup(title : String!, privacy : String!) : group!
+}

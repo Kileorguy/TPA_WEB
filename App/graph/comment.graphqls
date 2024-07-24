@@ -1,0 +1,23 @@
+type comment{
+    id : ID!
+    post : Post!
+    user : User!
+    text : String!
+    reply : [Reply]! @goField(forceResolver: true)
+    likeCount : Int! @goField(forceResolver: true)
+}
+
+input commentInput{
+    postID : String!
+    userID : String!
+    text : String!
+}
+
+extend type Query{
+    getComment (input : String!) : [comment]! @auth
+
+}
+
+extend type Mutation{
+    createComment(input : commentInput!) : comment @auth
+}

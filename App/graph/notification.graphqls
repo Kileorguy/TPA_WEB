@@ -1,0 +1,14 @@
+type notification{
+    id : ID!
+    user : User!
+    text : String!
+}
+
+extend type Mutation {
+    createNotification(input : String!) : notification! @auth
+    createNotificationID(input : String!, userID : String!) : notification!
+
+}
+extend type Query {
+    getNotification : [notification]! @auth
+}

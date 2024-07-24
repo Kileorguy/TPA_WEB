@@ -1,0 +1,302 @@
+mutation create($input: NewUser!) {
+  createUser(input: $input) {
+    firstName
+    surname
+    email
+    DOB
+    gender
+    password
+    role
+  }
+}
+
+query GetUser {
+  getUser {
+    id
+    firstName
+    surname
+    email
+    DOB
+    gender
+    profilePicture
+    password
+    role
+    active
+  }
+}
+
+query GetUserByEmail($token: String!) {
+  getUserbyEmail(token: $token) {
+    firstName
+    surname
+    DOB
+    profilePicture
+    email
+    password
+    DOB
+    gender
+    active
+  }
+}
+
+query doLogin($email: String!, $password: String!) {
+  login(email: $email, password: $password)
+}
+
+mutation activateAccount($email: String!) {
+  activateUser(email: $email) {
+    email
+  }
+}
+
+query validateToken($token: String!) {
+  validateToken(token: $token)
+}
+
+mutation addUpdateProfile($link: String!, $email: String!) {
+  addOrUpdateProfile(link: $link, email: $email) {
+    email
+    profilePicture
+  }
+}
+
+query GetAllPost {
+  getAllPost {
+    id
+    user {
+      firstName
+      surname
+      profilePicture
+    }
+    privacy
+    text
+    likeCount
+    comments {
+      id
+      user {
+        firstName
+        surname
+        email
+        profilePicture
+      }
+      text
+      reply {
+        user {
+          firstName
+          surname
+          email
+          profilePicture
+        }
+        text
+      }
+    }
+    commentCount
+    files {
+      file
+    }
+  }
+}
+
+mutation CreatePost($postInput: NewPost!) {
+  createPost(input: $postInput) {
+    id
+    privacy
+    text
+  }
+}
+
+mutation CreateFriends($friendEmail: String!) {
+  createFriends(input: $friendEmail) {
+    accepted
+  }
+}
+
+query GetFriend {
+  getFriend(input: "") {
+    id
+    email
+    firstName
+    surname
+    profilePicture
+  }
+}
+
+query GetFriendRequest {
+  getFriendRequest(input: "") {
+    id
+    email
+    firstName
+    surname
+  }
+}
+
+mutation AcceptFriendRequest($senderId: String!) {
+  acceptFriendRequest(senderId: $senderId)
+}
+
+query GetAllReels {
+  getAllReels {
+    ID
+    Link
+    User {
+      firstName
+      surname
+      email
+    }
+    Comments{
+      id
+      user{
+        firstName
+        surname
+        email
+        profilePicture
+      }
+      text
+    }
+  }
+  
+}
+
+mutation CreateReels($inputLink: String!, $text : String!) {
+  createReels(input: $inputLink,text : $text) {
+    Link
+  }
+}
+
+query SearchPost($search: String!) {
+  getSearchedPost(input: $search) {
+    user {
+      email
+      firstName
+      surname
+      profilePicture
+    }
+    text
+  }
+}
+
+query SearchUser($search: String!) {
+  getUserSearch(input: $search) {
+    firstName
+    surname
+    email
+    profilePicture
+  }
+}
+
+mutation addPostFile($file: String!, $postID: String!) {
+  createPostFile(input: $file, postID: $postID) {
+    id
+    post {
+      id
+    }
+    file
+  }
+}
+
+mutation deletePost($postID: String!) {
+  deletePost(id: $postID) {
+    id
+  }
+}
+
+query GetSelfReels {
+  getSelfReels {
+    Text
+    ID
+    User {
+      id
+      firstName
+      surname
+    }
+    Link
+  }
+}
+
+mutation delete_Self_Reels{
+  deleteSelfReels{
+    ID
+  }
+}
+
+mutation CreateReelsComment($reelsComment : RComment!){
+  createReelsComment(input :$reelsComment){
+    id
+    reel{
+      Text
+    }
+    user{
+      id
+      firstName
+      surname
+      email
+      profilePicture
+    }
+    text
+  }
+}
+
+query GetUserByID($userID :String!){
+    getUserByID(id :$userID){
+    id
+    firstName
+    surname
+    email
+    profilePicture
+    
+    
+  }
+}
+
+query MightKnow($email : String!){
+  getMightKnow(input : $email){
+    id
+    firstName
+    surname
+    email
+    profilePicture
+  }
+}
+
+query FriendMightKnow{
+  getFriendsMightKnow{
+    id
+    firstName
+    surname
+    email
+    profilePicture
+  }
+}
+
+{
+  "input": {
+    "firstName": "Robert",
+    "surname": "Robber",
+    "email": "weel@gmail.com",
+    "password": "weel123",
+    "DOB": "2023-08-02T12:34:56.789000000Z",
+    "gender": "Male",
+    "role": "User"
+  },
+  "postInput": {
+    "userID": "a1052ca1-79f4-401a-a5a6-7db1718f68d9",
+    "privacy": "Public",
+    "text": "asdasd"
+  },
+  "text": "buzz",
+  "inputLink": "test",
+  "email": "8598a567-b32f-4d8f-bc58-0c6564be8763",
+  "reelsComment": {
+  	"reelsID": "69e4bc8d-c536-4845-959f-08658e37e173",
+    "text": "eheheheheh"
+  },
+  "password": "dion123",
+  "userID": "0a8efdb2-bd32-46b8-bd7d-57b6d6919b76",
+  "friendEmail": "dion@email.com",
+  "senderId": "dion@email.com",
+  "file": "heheheh",
+  "postID": "b0c4591a-3ddb-4629-82f0-4e5150ba3bd5",
+  "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2OTI3Nzk2NDYsInN1YiI6ImRpb25AZW1haWwuY29tIn0.vVmHsCrYB_K3lSIaMzxsTurtBr5asrZ4Tpz6dbOWeDs",
+  "link": "https://firebasestorage.googleapis.com/v0/b/tpa-web-d39e0.appspot.com/o/profilePict%2FWIN_20230525_08_27_01_Pro.jpg?alt=media&token=a55bf6c1-e2ed-4d63-897f-8316bff77e75",
+  "search": "hen"
+}

@@ -1,0 +1,63 @@
+:root {
+    --text-color: red;
+    --background-color: #242526;
+    --second-background-color : white;
+    --third-background-color : #dfe3ee;
+
+}
+
+nav{
+    /*margin: 0;*/
+    padding: 2px 14px 2px 14px;
+    display: flex;
+    justify-content: space-between;
+    background-color: var(--second-background-color);
+    width: 99.09%;
+    align-items: center;
+
+}
+
+.icon{
+    color: #3b5998;
+    font-size: 40px;
+}
+
+.iconMid{
+    color: #3b5998;
+    font-size: 32px;
+}
+
+.iconRight{
+    color: #3b5998;
+    font-size: 25px;
+}
+
+.iconRight1{
+    color: #3b5998;
+    font-size: 30px;
+}
+
+.iconMid1{
+    color: #3b5998;
+    font-size: 38px;
+}
+
+.left{
+    display: flex;
+}
+
+.midContent{
+    gap: 25px;
+    display: flex;
+    margin-right: 22vw;
+
+}
+
+.rightNav{
+    display: flex;
+    gap: 25px;
+}
+
+.gap{
+    height: 3vh;
+}

@@ -1,0 +1,9 @@
+type postFile{
+    id : ID!
+    post : Post!
+    file : String!
+}
+
+extend type Mutation {
+    createPostFile(input : String!, postID : String!): postFile!
+}

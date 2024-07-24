@@ -1,0 +1,19 @@
+type chatRoom{
+    id : ID!
+    user1 : User!
+    user2 : User!
+}
+
+input createChatRoom{
+    userID : String!
+    user2ID : String!
+}
+
+extend type Query {
+    getChatRoom(user : String!): [chatRoom]!
+}
+
+extend type Mutation {
+    createChatRoom(input : createChatRoom) : chatRoom
+
+}

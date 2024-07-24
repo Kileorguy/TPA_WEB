@@ -1,0 +1,75 @@
+.groupProfileOuter{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 99vw;
+    gap: 20px;
+}
+.flex{
+    display: flex;
+    gap: 5px;
+}
+
+.mainGroupP{
+    padding: 10px;
+    display: flex;
+    gap: 10px;
+    flex-direction: column;
+    width: 1280px;
+    min-height: 200px;
+    background-color: white;
+    border-radius: 5px;
+    box-shadow: 0 0 2px rgba(0, 0, 0, 0.15);
+}
+
+.memberContainer{
+    width: 40%;
+    min-height: 100px;
+    display: flex;
+    flex-direction: column;
+    border-radius: 5px;
+    box-shadow: 0 0 2px rgba(0, 0, 0, 0.4);
+    align-items: center;
+}
+
+.members{
+    width: 100%;
+    justify-content: space-evenly;
+    display: flex;
+}
+
+#profilePicture{
+    width: 40px;
+    height: 40px;
+}
+
+.userContain{
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.addFriend{
+    width: 1280px;
+    min-height: 100px;
+    background-color: white;
+    gap: 10px;
+    border-radius: 5px;
+    box-shadow: 0 0 2px rgba(0, 0, 0, 0.15);
+    padding: 10px;
+}
+
+.groupPost{
+    width: 1280px;
+    min-height: 120px;
+    background-color: white;
+
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    border-radius: 5px;
+    box-shadow: 0 0 2px rgba(0, 0, 0, 0.15);
+    padding: 10px;
+}

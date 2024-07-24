@@ -1,0 +1,22 @@
+type Reels{
+    ID : String!
+    User : User!
+    Link : String!
+    Text : String!
+    LikeCount : Int! @goField(forceResolver: true)
+    Comments : [reelsComments]! @goField(forceResolver: true)
+    CommentCount : Int! @goField(forceResolver: true)
+}
+
+extend type Query{
+    getAllReels : [Reels]! @auth
+    getSelfReels : Reels! @auth
+    getReelsByEmail(input : String!): Reels!
+
+}
+
+extend type Mutation{
+    createReels(input : String!, text : String!) : Reels! @auth
+    deleteSelfReels : Reels! @auth
+
+}

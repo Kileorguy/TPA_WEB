@@ -1,0 +1,26 @@
+.searchOuter{
+    display: flex;
+    flex-direction: column;
+    width: 99vw;
+    height: 100vh;
+    align-items: center;
+    gap: 20px;
+}
+
+.searchUpper{
+    display: flex;
+    gap: 10px;
+}
+
+.searchResult{
+    display: flex;
+    flex-direction: column;
+    /*justify-content: center;*/
+    /*align-items: center;*/
+    gap: 20px;
+    width: 70vw;
+
+}
+h1{
+    text-align: center;
+}

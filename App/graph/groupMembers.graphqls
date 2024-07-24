@@ -1,0 +1,23 @@
+type groupMember{
+    id : ID!
+    group : group!
+    user : User!
+    isAdmin : Boolean!
+}
+
+input inputGroupMember{
+    groupID : String!
+    userID : String!
+    isAdmin : Boolean!
+}
+extend type Mutation {
+    createGroupMember(input : inputGroupMember!) : groupMember!
+    leaveGroup(groupID : String!) : groupMember! @auth
+    setToAdmin(userID : String!, groupID:String!) : groupMember!
+    kickMember(userID : String!, groupID:String!) : groupMember!
+}
+
+extend type Query{
+    getSelfGroups : [group]! @auth
+    getRoleByAuth(groupID : String!): groupMember! @auth
+}

@@ -1,0 +1,19 @@
+type postLike{
+    post : Post!
+    User : [User]!
+}
+
+type reelsLike{
+    reels : Reels!
+    User : [User]!
+}
+
+extend type Query{
+    getPostLikes(input : String!) : [postLike]! @auth
+    getReelsLikes(input : String!) : [reelsLike]! @auth
+}
+
+extend type Mutation{
+    addPostLike(postId : String!, userId : String!) : postLike! @auth
+    addReelsLike(reelsId : String!, userID : String!) : reelsLike! @auth
+}

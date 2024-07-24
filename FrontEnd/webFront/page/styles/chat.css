@@ -1,0 +1,113 @@
+:root {
+    --text-color: red;
+    --background-color: #242526;
+    --second-background-color : white;
+    --third-background-color : #dfe3ee;
+
+}
+
+.chatOuter{
+    color : var(--text-color);
+    display: flex;
+    width: 99vw;
+    height: 86vh;
+    gap: 30px;
+
+}
+
+.bubbleContainer{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+    height: 90%;
+    overflow-y: scroll;
+}
+
+.chatLeft{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+    border-right: 2px solid #000;
+    overflow-y: scroll;
+
+    /*background-color: #8b9dc3;*/
+    width: 400px;
+    height: 100%;
+}
+
+.chatRight{
+    display: flex;
+    flex-direction: column;
+    width: 1250px;
+    height: 100%;
+    background-color: var(--background-color);
+    border-radius: 5px;
+    box-shadow: 0 0 2px rgba(0, 0, 0, 0.1);
+    align-items: center;
+    /*padding: 10px;*/
+
+}
+
+.chatMedia{
+    width: 300px;
+    height: 80px;
+    background-color: var(--second-background-color);
+    border-radius: 5px;
+    box-shadow: 0 0 2px rgba(0, 0, 0, 0.1);
+}
+
+.chatPic img{
+    /*padding-left: 20px;*/
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    border: 1px solid black;
+}
+
+.chatMedia{
+    display: flex;
+    align-items: center;
+    padding-left: 10px;
+    gap: 10px;
+}
+
+.bubble{
+    padding:5px;
+    margin-left: 20px;
+    width: 40%;
+    background-color: var(--third-background-color);
+    align-self: flex-start;
+    border-radius: 5px;
+    box-shadow: 0 0 2px rgba(0, 0, 0, 0.1);
+}
+
+.bubbleRight{
+    padding:5px;
+
+    margin-right: 20px;
+    width: 40%;
+    background-color: #8b9dc3;
+    align-self: flex-end;
+    border-radius: 5px;
+    box-shadow: 0 0 2px rgba(0, 0, 0, 0.1);
+}
+
+.inputText{
+    border-radius: 15px;
+    margin-top: 10px;
+    padding: 10px;
+    /*padding-top: 20px;*/
+    border: none;
+    background-color: #f7f7f7;
+    width: 90%;
+}
+.chatFileContainer{
+    display: flex;
+    gap: 10px;
+}
+
+.chatImgLeft{
+
+}

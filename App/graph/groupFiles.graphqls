@@ -1,0 +1,19 @@
+type groupFiles{
+    id : ID!
+    fileName : String!
+    group : group!
+    user : User!
+    time : Time!
+    link : String!
+}
+
+extend type Query{
+    getGroupFiles(groupID : String!) : [groupFiles]!
+}
+
+extend type Mutation {
+    createGroupFiles(groupID : String!, link : String!, fileName : String!) : groupFiles! @auth
+    deleteGroupFiles(id : String!) : groupFiles!
+    setLinkInDB(id : String!, link : String!) : groupFiles!
+
+}

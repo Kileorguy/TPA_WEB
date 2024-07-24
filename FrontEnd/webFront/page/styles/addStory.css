@@ -1,0 +1,54 @@
+
+.addStoryOuter{
+    display: flex;
+
+    width: 98vw;
+    height: 90vh;
+
+}
+
+.leftAddStory{
+    width: 25%;
+    height: 100%;
+    gap: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.storyLeft button{
+    width: 50%;
+}
+
+.rightAddStory{
+    display: flex;
+    width: 75%;
+    justify-content: center;
+    /*background-color: black;*/
+}
+.story{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 35%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.leftUpper{
+    height: 50%;
+    display: flex;
+    flex-direction: column;
+}
+.leftBottom{
+    height: 50%;
+    display: flex;
+    flex-direction: column;
+    word-break: break-all;
+}
+
+#storyText{
+    word-break: break-all;
+}
+
+

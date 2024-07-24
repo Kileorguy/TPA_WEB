@@ -1,0 +1,41 @@
+
+
+directive @goField(
+    forceResolver : Boolean
+    name: String
+    omittable : Boolean
+) on INPUT_FIELD_DEFINITION | FIELD_DEFINITION
+
+
+type Post {
+    id: ID!
+    user : User!
+    privacy : String!
+    text : String!
+    likeCount : Int! @goField(forceResolver: true)
+    comments : [comment]! @goField(forceResolver: true)
+    commentCount : Int! @goField(forceResolver: true)
+    files : [postFile]! @goField(forceResolver: true)
+    groupID : String!
+}
+
+input NewPost {
+    userID : ID!
+    privacy : String!
+    text : String!
+}
+
+
+extend type Query{
+    getAllPost: [Post]!
+    getSearchedPost(input : String!) : [Post]!
+    getUserPost(input : String!): [Post]!
+    getUserIdPost(postID : String!): [Post]!
+    getPostGroupID(groupID : String!): [Post]!
+}
+
+extend type Mutation{
+    createPost (input : NewPost!) : Post!
+    deletePost (id : String!) : Post
+    createPostGroup (input : NewPost!, groupID : String!) : Post!
+}

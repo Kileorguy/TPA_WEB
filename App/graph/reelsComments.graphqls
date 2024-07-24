@@ -1,0 +1,21 @@
+type reelsComments{
+    id : ID!
+    reel : Reels!
+    user : User!
+    text : String!
+    reply : [Reply]! @goField(forceResolver: true)
+    likeCount : Int! @goField(forceResolver: true)
+}
+
+input RComment{
+    reelsID : String!
+    text : String!
+}
+
+extend type Query{
+    getReelsComment (input : String!) : [reelsComments]! @auth
+}
+
+extend type Mutation{
+    createReelsComment(input : RComment!) : reelsComments @auth
+}

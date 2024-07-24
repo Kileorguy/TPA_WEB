@@ -1,0 +1,16 @@
+type groupRequest{
+    id : ID!
+    groupID : String!
+    user : User!
+}
+
+extend type Query {
+    getGroupRequest(groupID : String!): [groupRequest]!
+}
+
+extend type Mutation {
+    createRequest(groupID : String!, userID: String!): groupRequest!
+    acceptRequest(groupID : String!, userID: String!) : groupRequest!
+    deleteRequest(groupID : String!, userID: String!) : groupRequest!
+
+}

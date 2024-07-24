@@ -1,0 +1,17 @@
+type Friends{
+    sender : User!
+    receiver : User!
+    accepted : Boolean!
+}
+
+extend type Query{
+    getFriend (input : String!) : [User]! @auth
+    getFriendRequest(input : String!) : [User]! @auth
+    getMightKnow(input : String!) : [User]! @auth
+    getFriendsMightKnow : [User]! @auth
+}
+
+extend type Mutation{
+    createFriends(input : String!): Friends! @auth
+    acceptFriendRequest(senderId : String!) : Boolean @auth
+}

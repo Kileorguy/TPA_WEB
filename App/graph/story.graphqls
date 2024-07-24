@@ -1,0 +1,28 @@
+type story{
+    id : ID!
+    text : String!
+    user: User!
+    textColor : String!
+    backgroundColor : String!
+    link : String!
+    createdAt : Time!
+}
+
+input newTextStory{
+    text : String!
+    textColor : String!
+    backgroundColor : String!
+}
+input newPhotoStory{
+    link : String!
+}
+
+extend type Query{
+    getFriendsStories: [story]! @auth
+}
+
+extend type Mutation {
+    createPhotoStory(input : newPhotoStory!) : story! @auth
+    createTextStory(input : newTextStory!) : story! @auth
+    validate24H : Boolean!
+}

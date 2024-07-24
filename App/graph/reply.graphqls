@@ -1,0 +1,16 @@
+type Reply{
+    id : ID!
+    comment : comment!
+    user : User!
+    text : String!
+    likeCount : Int! @goField(forceResolver: true)
+}
+
+input ReplyInput{
+    commentID : String!
+    text : String!
+}
+
+extend type Mutation{
+    addReply(input : ReplyInput!): Reply
+}

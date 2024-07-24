@@ -1,0 +1,258 @@
+*{
+    font-size: 18px;
+    text-decoration: none;
+}
+
+.mainContainer{
+
+    background-color: #dfe3ee;
+    display: flex;
+    width: 98vw;
+    min-height: 99vh;
+    align-items: flex-start;
+    justify-content: space-evenly;
+}
+#line{
+    margin-top: 2vh;
+    margin-bottom: 2vh  ;
+    border-top: 1px solid black;
+    /*padding: 100px;*/
+}
+#line1{
+    /*margin-top: 0.5vh;*/
+    /*margin-bottom: 0.5vh  ;*/
+    border-top: 1px solid black;
+    /*padding: 100px;*/
+}
+
+.left{
+    /*padding: 10vw;*/
+    display: flex;
+    flex-direction: column;
+    width: 25vw;
+    gap: 10px;
+}
+
+.mid{
+    display: flex;
+    flex-direction: column;
+    width: 40vw;
+    height: fit-content;
+    gap: 1vh;
+}
+
+.cardContainer{
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    border-radius: 5px;
+    box-shadow: 0 0 2px rgba(0, 0, 0, 0.1);
+    gap: 10px;
+
+}
+
+.right{
+    display: flex;
+    flex-direction: column;
+    width: 25vw;
+}
+.upperHome{
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.upperHome a{
+    color: black;
+}
+
+.stories{
+    display: flex;
+    width: 28%;
+    height: 30vh;
+    background-color: gray;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+.storyContainer{
+    display: flex;
+    overflow: hidden;
+}
+
+.content{
+
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 10px;
+}
+.content a{
+    color: black;
+}
+
+.story-bottom{
+    padding: 10px;
+    align-self: end;
+}
+
+.story-bottom a{
+    color: black;
+}
+
+.redirect{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.logo{
+    font-size: 32px;
+    color: black;
+}
+.logo1{
+    padding-top: 1px;
+    font-size: 30px;
+    color: black;
+}
+
+.profilePict{
+    border-radius: 50%;
+    width: 26px;
+    height: 26px;
+    /*border: 1px solid black;*/
+}
+
+.profilePict img{
+    border-radius: 50%;
+    width: 26px;
+    height: 26px;
+    border: 1px solid black;
+}
+.fileContainer{
+    display: flex;
+    overflow-x: scroll;
+    gap: 5px;
+}
+.fileContainer img{
+    height: 400px;
+    width: auto;
+}
+.fileContainer video{
+    height: 400px;
+    width: auto;
+}
+.postPic1{
+    /*border-radius: 50%;*/
+    /*width: 40px;*/
+    /*height: 40px;*/
+    /*border: 1px solid black;*/
+    /*background-image: url("../assets/defaultPict.jpg");*/
+}
+.postPic1 img{
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    border: 1px solid black;
+
+}
+
+.iconLeft{
+    font-size: 26px;
+    /*color: ;*/
+}
+
+.insideCard{
+    align-items: center;
+    display: flex;
+    gap: 15px;
+}
+
+.cardText{
+    width: 85%;
+    border-radius: 25px;
+    padding : 10px;
+    background-color: #f7f7f7;
+}
+.cardText p{
+    color: dimgray;
+}
+
+.upperPost{
+    display: flex;
+    gap: 15px;
+    align-items: center;
+}
+
+.interactPost{
+    display: flex;
+    justify-content: space-evenly;
+    gap: 20px;
+}
+
+.interactItem{
+    display: flex;
+    gap: 10px;
+}
+
+.content{
+    margin-top: 5px;
+    margin-bottom: 10px;
+}
+
+.comments{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.comment{
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+.commentContent{
+    border-radius: 15px;
+    padding: 10px;
+    background-color: #f7f7f7;
+}
+
+.commentInteract{
+    padding-left: 42px;
+    display: flex;
+    gap: 20px;
+}
+.commentInteract p{
+    font-size: 16px;
+}
+
+.insideComment{
+    display: flex;
+    gap: 15px;
+}
+
+.commentTemplate{
+    border-radius: 15px;
+    padding: 10px;
+    border: none;
+    background-color: #f7f7f7;
+    width: 90%;
+}
+
+.commentTemplate p{
+    color : dimgray;
+}
+
+.commentContent{
+    color: black;
+}
+
+.replyOuter{
+    padding-left: 40px;
+}
+
+.click:hover{
+    text-decoration: underline;
+    cursor: pointer;
+}
+

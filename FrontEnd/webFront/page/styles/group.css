@@ -1,0 +1,32 @@
+.groupOuter{
+    width: 99vw;
+    display: flex;
+    gap: 5px;
+    justify-content: center;
+    align-items: center;
+}
+
+.groupLeft{
+    padding: 10px;
+    width: 20%;
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    gap: 10px;
+    align-items: center;
+    min-height: 100px;
+}
+.groupRight{
+    padding: 5px;
+
+    width: 20%;
+    background-color: white;
+    min-height: 100px;
+}
+
+.groupCard{
+    padding: 10px;
+    min-width: 175px;
+    border-radius: 5px;
+    box-shadow: 0 0 2px rgba(0, 0, 0, 0.5);
+}
